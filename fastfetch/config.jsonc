@@ -1,0 +1,41 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "type": "kitty",
+	"source": "/home/Rage/Pictures/fastfetch-imgs/tokyoghoul.jpg",
+	"width": 18,
+	"height": 9
+    },
+    "display": {
+        "separator": "  ",
+        "color": {
+            "keys": "white"
+        },
+        "size": {
+            "ndigits": 0,
+            "maxPrefix": "MB"
+        },
+        "key": {
+            "type": "icon"
+        }
+    },
+    "modules": [
+        {
+            "type": "title",
+            "color": {
+                "user": "white",
+                "at": "#8a8a8a",
+                "host": "#8a8a8a"
+            }
+        },
+        "os",
+        "kernel",
+        "memory",
+        "packages",
+        "uptime",
+        {
+            "type": "custom",
+            "format": "󰏘  \u001b[38;2;255;255;255m● \u001b[38;2;200;200;200m● \u001b[38;2;150;150;150m● \u001b[38;2;100;100;100m● \u001b[38;2;60;60;60m● \u001b[0m"
+        }
+    ]
+}
