@@ -1,0 +1,52 @@
+{
+    "layer": "top",
+    "position": "top",
+    "modules-left": ["niri/workspaces", "niri/window"],
+    "modules-center": ["clock"],
+    "modules-right": [ "network","wireplumber","battery", "custom/power-btn"],
+
+    "niri/window": {
+        "max-length": 50
+    },
+    "niri/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "format-icons":{
+            "default": ""
+        }
+    },
+
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "clock": {
+        "format": "{:%d/%m/%y |  %H:%M}"
+    },
+    "wireplumber": {
+        "format": "{icon} {volume}",
+        "format-muted": " Shh",
+        "format-icons": ["", "", ""],
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "scroll-step": 5,
+        "tooltip": false
+    },
+    "network": {
+        "interface": "wlp61s0",
+        "format": "{ifname}",
+        "format-wifi": " {essid}",
+        "format-ethernet": " {ifname}",
+        "format-disconnected": "",
+        "tooltip-format": "{ifname}",
+        "tooltip-format-wifi": " {essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": " {ifname}",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50
+    },
+    "custom/power-btn":{
+        "format": "",
+        "on-click": "rofi -show logout",
+        "tooltip": false
+    }
+
+}

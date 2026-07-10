@@ -1,0 +1,54 @@
+configuration {
+    modes: [ combi, logout ];
+    combi-modes: [ window, drun, run ];
+    show-icons: true;
+
+}
+
+* {
+    font: "MonaspiceKr Nerd Font Mono 12";
+}
+
+
+window {
+    background-color: #24273A;
+    border: 2px;
+    border-color: #336b26;
+    padding: 16px;
+    width: var(width, 50%);
+    height: var(height, 30%);
+    color: #cad3f5;
+}
+
+entry, prompt, element-text{
+    text-color: #cad3f5;
+}
+
+listview{
+    scrollbar: false;
+    columns: 4;
+    fixed-columns: true;
+    fixed-lines: true;
+    spacing: 16;
+    layout: vertical;
+    flow: horizontal;
+    dynamic: true;
+}
+
+element alternate.normal, element normal.normal{
+    background-color: #24273A;
+}
+
+element{
+    orientation: vertical;
+    padding: 12;
+}
+
+element-text{
+    horizontal-align: 0.5;
+}
+
+element-icon{
+    size: 5.5em;
+}
+

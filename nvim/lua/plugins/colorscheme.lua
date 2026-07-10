@@ -1,9 +1,15 @@
 return {
-  "oskarnurm/koda.nvim",
-  lazy = false, -- make sure we load this during startup if it is your main colorscheme
-  priority = 1000, -- make sure to load this before all the other start plugins
-  config = function()
-    require("koda").setup({ transparent = true })
-    vim.cmd("colorscheme koda")
-  end,
+    "catppuccin/nvim",
+    name = "catppuccin",
+    priority = 1000 ,
+    opts = {
+        flavour =  "frappe"
+    },
+    config = function()
+        require("catppuccin").setup()
+
+        -- setup must be called before loading
+        vim.cmd.colorscheme "catppuccin-macchiato"
+      end,
 }
+

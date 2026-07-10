@@ -1,0 +1,66 @@
+* {
+    font-size: 13px;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    border-radius: 0px;
+    font-family: "Monaspace Krypton", "Font Awesome 7 Free";
+}
+
+#waybar{
+    background-color: transparent;
+    color: #cad3f5;
+}
+
+#waybar > box {
+    margin: 8px 16px 8px 16px;
+    padding: 8px;
+    background-color: #336b26;
+    box-shadow: 8px 8px rgba(0,0,0,0.5);
+}
+
+
+#battery,
+#clock,
+#window,
+#custom-power-btn,
+#wireplumber,
+#network
+{
+    margin: 0px 2px 0px 2px;
+    padding: 4px 10px 4px 10px;
+}
+
+#workspaces button, 
+#window,
+#battery,
+#clock,
+#custom-power-btn,
+#wireplumber,
+#network
+{
+    border: 0px solid;
+    box-shadow: inset 2px 2px 0 0 #000000;
+    background-color: #25471D;
+}
+
+#window{
+    min-height: 16px;
+    margin-left: 8px;
+}
+
+#workspaces button {
+    margin-right: 4px;
+    transition: padding 0.2s cubic-bezier(0.92, 2.03, 0.46, 0.75);
+    padding: 0px 4px 0px 4px;
+}
+#workspaces button:hover {
+    background-color: white;
+}
+
+#workspaces button.focused {
+    background-color: #A3CF57;
+    border: 0px solid;
+    box-shadow: inset -2px -2px 0 0 #25471d;
+    padding: 0px 8px 0px 8px;
+}
